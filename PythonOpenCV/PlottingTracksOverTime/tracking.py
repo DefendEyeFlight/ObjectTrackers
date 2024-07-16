@@ -33,7 +33,7 @@ while cap.isOpened():
     success, frame = cap.read()
 
     if success:
-        results = model.track(frame, persist=True)
+        results = model.track(frame, persist=True, tracker = "bytetrack.yaml", imgsz = [1080,1920]) #you can choose "botsort.yaml" or "bytetrack.yaml"
 
         if results is not None:
             for result in results:
