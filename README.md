@@ -22,22 +22,22 @@ To use the scripts in this repository, follow these steps:
    ```
 4. **Install required packages:**
    ```
-      conda install -c conda-forge ultralytics
-      conda install -c pytorch -c nvidia -c conda-forge pytorch torchvision pytorch-cuda=11.8 ultralytics
+   conda install -c conda-forge ultralytics
+   conda install -c pytorch -c nvidia -c conda-forge pytorch torchvision pytorch-cuda=11.8 ultralytics
    ```
 5. **Once you have set up the environment, you can use the scripts to experiment with different OpenCV trackers:**
    
    **What you need to modify**:
      - VideoPath (line 10 for PlottingTracksOverTime, line 8 for PersistingTracksLoop):
        ```
-          video_path = "video.mp4" #set path to your video file
-          cap = cv2.VideoCapture(video_path)
+       video_path = "video.mp4" #set path to your video file
+       cap = cv2.VideoCapture(video_path)
        ```
        - Also you can configure output_path (line 24 for PlottingTracksOverTime, line 13 for PersistingTracksLoop)
          
      - Trackers and Imgsz (line 22 for PersistingTracksLoop, line 36 for PlottingTracksOverTime):
        ```
-          results = model.track(frame, persist=True, tracker = "bytetrack.yaml", imgsz = [1080,1920]) #you can choose "botsort.yaml" or "bytetrack.yaml" and different image size
+       results = model.track(frame, persist=True, tracker = "bytetrack.yaml", imgsz = [1080,1920]) #you can choose "botsort.yaml" or "bytetrack.yaml" and different image size
        ```
 
 # ByteTrack
