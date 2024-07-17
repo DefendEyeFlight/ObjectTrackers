@@ -3,11 +3,9 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-# Load the model
 model = YOLO("yolov8n_02_07.pt")
 
-# Open the video file
-video_path = "/video_path"
+video_path = "/video_path" #set your video path
 cap = cv2.VideoCapture(video_path)
 
 # Check if the video opened successfully
@@ -21,14 +19,12 @@ width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # Define the codec and create VideoWriter object
-out_path = "video_track.mp4"
+out_path = "video_track.mp4" #set your video output path
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 out = cv2.VideoWriter(out_path, fourcc, fps, (width, height))
 
-# Store the track history
 track_history = defaultdict(list)
 
-# Loop through the video frames
 while cap.isOpened():
     success, frame = cap.read()
 
