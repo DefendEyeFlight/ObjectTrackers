@@ -39,6 +39,10 @@ To use the scripts in this repository, follow these steps:
        ```
        results = model.track(frame, persist=True, tracker = "bytetrack.yaml", imgsz = [1080,1920]) #you can choose "botsort.yaml" or "bytetrack.yaml" and different image size
        ```
+**PlottingTracksOverTime ByteTrack**
+Speed: 6.5ms preprocess, 5.3ms inference, 0.8ms postprocess per image at shape (1, 3, 1088, 1920)
+**PersistingTracksLoop ByteTrack**
+Speed: 6.4ms preprocess, 5.3ms inference, 0.7ms postprocess per image at shape (1, 3, 1088, 1920)
 
 # ByteTrack
 
