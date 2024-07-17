@@ -39,3 +39,12 @@ To use the scripts in this repository, follow these steps:
        ```
           results = model.track(frame, persist=True, tracker = "bytetrack.yaml", imgsz = [1080,1920]) #you can choose "botsort.yaml" or "bytetrack.yaml" and different image size
        ```
+
+# ByteTrack
+
+**ByteTrack** is a high-speed and accurate object tracker. You can run inference on your system by following the instructions in the ByteTrack/README.
+
+**To deploy** this tracker on low-resource devices, navigate to ByteTrack/Deploy/ncnn/cpp, where you will also find detailed instructions for running on various types of devices.
+
+You can view the list of supported devices at this link: `https://github.com/Tencent/ncnn/wiki/how-to-build`
+
